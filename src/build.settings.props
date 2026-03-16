@@ -17,7 +17,7 @@
 	  <DebugType>portable</DebugType>
 	  <DebugSymbols>true</DebugSymbols>
 
-	  <!-- Символьный пакет (опционально, если выкладываешь на nuget.org) -->
+	  <!-- Символьный пакет (опционально, если выкладываешь на nuget.orgшш) -->
 	  <IncludeSymbols>true</IncludeSymbols>
 	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>

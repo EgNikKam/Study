@@ -26,5 +26,8 @@ public class RunService : IRunService
     /// <summary>
     /// Задание 3
     /// </summary>
-    public void RunTask3() => throw new NotImplementedException();
+    public void RunTask3()
+    {
+        new Task3().Exec();
+    }
 }

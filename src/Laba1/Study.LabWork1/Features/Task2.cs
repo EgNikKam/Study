@@ -1,28 +1,6 @@
 namespace Study.LabWork1.Features;
 
 ///<summary>realisation Task1 class</summary>
-class Task2
-{
-    public void Exec()
-    {
-        MemOrderSaver memRepo = new();
-        CSVOrderRepo csvRepo = new("orders.csv");
-        Client client = new("Вася", memRepo, csvRepo);
-
-        client.Request("пуховик женский");
-        client.Request("пуховик мужской");
-
-        Console.WriteLine("=== Memory ===");
-        foreach (Order order in memRepo.GetOrders())
-            Console.WriteLine($"Id: {order.Id}, Client: {order.ClientName}, Garment: {order.Garment}");
-
-        Console.WriteLine("=== CSV ===");
-        foreach (Order order in csvRepo.GetOrders())
-            Console.WriteLine($"Id: {order.Id}, Client: {order.ClientName}, Garment: {order.Garment}");
-    }
-}
-
-///<summary>realisation Task1 class</summary>
 public interface IOrderRepo
 {
     ///<summary>realisation Task1 class</summary>

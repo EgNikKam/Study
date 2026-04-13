@@ -1,16 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
-
   <Import Project="..\..\build.settings.props" />
-  <Import Project="..\..\readme-generation.props" />
-  
+ <!-- <Import Project="..\..\readme-generation.props" /> -->
   <ItemGroup>
     <Folder Include="Features\Task1\" />
     <Folder Include="Features\Task2\" />
     <Folder Include="Features\Task3\" />
   </ItemGroup>
-
 </Project>

@@ -14,26 +14,24 @@ public interface IRunService
     /// <summary>
     /// Запуск выполнения задания 2
     /// </summary>
-    void RunTask2()
-    {
-        MemOrderSaver memRepo = new();
-        CSVOrderRepo csvRepo = new("orders.csv");
-        Client client = new("Вася", memRepo, csvRepo);
-
-        client.Request("пуховик женский");
-        client.Request("пуховик мужской");
-
-        Console.WriteLine("=== Memory ===");
-        foreach (Order order in memRepo.GetOrders())
-            Console.WriteLine($"Id: {order.Id}, Client: {order.ClientName}, Garment: {order.Garment}");
-
-        Console.WriteLine("=== CSV ===");
-        foreach (Order order in csvRepo.GetOrders())
-            Console.WriteLine($"Id: {order.Id}, Client: {order.ClientName}, Garment: {order.Garment}");
-    }
-
+    void RunTask2();
     /// <summary>
     /// Запуск выполнения задания 3
     /// </summary>
-    void RunTask3();
+    void RunTask3()
+    {
+        Node root = new("Дед");
+        Node child1 = new("Батя");
+        Node child2 = new("Дядя");
+        Node grandchild1 = new("Внучок");
+        Node grandchild2 = new("Племянник");
+
+        root.Children.Add(child1);
+        root.Children.Add(child2);
+        child1.Children.Add(grandchild1);
+        child2.Children.Add(grandchild2);
+
+        foreach (string val in root.GoRound())
+            Console.WriteLine(val);
+    }
 }
